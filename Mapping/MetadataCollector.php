@@ -315,8 +315,6 @@ class MetadataCollector
      */
     private function getFileNamespace($filepath)
     {
-        var_dump($filepath);
-        die;
         $exists = preg_match('/<\?php.+?namespace ([^;]+)/si', file_get_contents($filepath), $match);
 
         if ($exists && isset($match[1])) {
